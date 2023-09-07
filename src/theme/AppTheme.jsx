@@ -12,5 +12,5 @@ export const AppTheme = ({ children }) => {
 };
 
 AppTheme.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.element,
 };
