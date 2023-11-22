@@ -7,9 +7,9 @@ import { useForm } from "../../hooks/useForm";
 import { startCreatingUserWithEmailAndPassword } from "../../store/auth/thunks";
 
 const formData = {
-  displayName: "Florencia Luz Duarte",
-  email: "flor@gmail.com",
-  password: "123456",
+  displayName: "",
+  email: "",
+  password: "",
 };
 
 const formValidations = {

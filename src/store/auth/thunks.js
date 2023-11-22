@@ -31,11 +31,12 @@ export const startCreatingUserWithEmailAndPassword = ({
 }) => {
   return async (dispatch) => {
     dispatch(checkingCredentials());
-    const response = await registerUserWithEmailAndPassword({
+    const result = await registerUserWithEmailAndPassword({
       email,
       password,
       displayName,
     });
-    console.log(response);
+    if (!result.ok) return dispatch(logout(result));
+    dispatch(login(result));
   };
 };
