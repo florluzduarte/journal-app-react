@@ -12,11 +12,8 @@ export const uploadFile = async (file) => {
       body: formData,
     });
 
-    console.log(response);
     if (!response.ok) throw new Error("No se pudo subir el archivo");
-
     const cloudinaryResponse = await response.json();
-    console.log(cloudinaryResponse);
     return cloudinaryResponse.secure_url;
   } catch (error) {
     console.log(error);
